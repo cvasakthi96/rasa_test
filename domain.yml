@@ -1,0 +1,72 @@
+%YAML 1.1
+---
+actions:
+- actions.tracking
+- utter_goodbye
+- utter_greet
+- utter_ack_affirm
+- utter_ask_userName
+- actions.addtocart
+- utter_default
+- utter_ask_userPassword
+- utter_ask_trackingId
+- utter_ask_emailId
+- utter_ask_itemName
+- action_default_fallback
+- utter_message
+- actions.removefromcart
+entities:
+- userPassword
+- trackingId
+- userName
+- itemName
+- emailId
+- number
+forms:
+- detail_form
+intents:
+- addtocart
+- trackid
+- greet
+- deny
+- thankyou
+- removefromcart
+- inform
+- affirm
+slots:
+  email_id:
+    type: text
+  itemname:
+    type: text
+  requested_slot:
+    type: unfeaturized
+  status:
+    type: text
+  tracking_id:
+    type: text
+  username:
+    type: text
+  userpassword:
+    type: text
+templates:
+  utter_affirm:
+  - text: 'Are you sure ?  '
+  utter_ask_emailId:
+  - text: please provide your Email Id
+  utter_ask_itemName:
+  - text: please provide your Item Name
+  utter_ask_trackingId:
+  - text: please provide your Tracking Id
+  utter_ask_userName:
+  - text: please provide your User Name
+  utter_ask_userPassword:
+  - text: please provide your Password
+  utter_default:
+  - text: "I didn't get you :-( , please try again "
+  utter_goodbye:
+  - text: goodbye :(
+  - text: Bye-bye
+  utter_greet:
+  - text: Hello! Welcome to the test version of JetApp
+  utter_message:
+  - text: '{itemName} add to your cart'
