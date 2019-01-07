@@ -1,14 +1,12 @@
 
-### All these files are ready for you to use, all you have to do is provide your Google Places API key to credentials.yml file and train the models. Train the NLU model using the command below which will call Rasa NLU train function, pass training data and processing pipeline configuration files, and save the model inside the models/current/nlu_model directory:
-
-https://rasa.com/docs/core/0.9.8/tutorial_supervised/
+### All these files are ready for you to use, all you have to do is provide your Google Places API key to credentials.yml file and train the models. Train the NLU model using the command below which will call Rasa NLU train function, pass training data and processing pipeline configuration files, and save the model inside the models/current/nlu_model directory:https://rasa.com/docs/core/0.9.8/tutorial_supervised/
 
 
-```
+
 Terminal bot:
 
 here test is project name 
-
+```
 step1:
 
 
@@ -21,22 +19,17 @@ python3.5 -m rasa_core.train -d domain.yml -s stories.md -o models/jet/dialogue
 additional:
 -c policy_config.yml
 
-```
-
 not working with new verstion:
-
-
 python3.5 -m rasa_core.train  interactive -d domain.yml -s stories.md -o models/test/dialogue  --nlu_threshold 0.2 --core_threshold 0.2 --fallback_action_name 'action_default_fallback'
 
-```
 step3: 
 
 python3.5 -m rasa_core.run  --enable_api -d models/test/dialogue -u models/test/nlu_model --debug --endpoints endpoints.yml
 
-```
-
 ex:
 curl localhost:3000/parse -d '{"q":"hellothere"}'
+
+```
 
 
 ```
@@ -48,9 +41,7 @@ python -m rasa_core.train -s bot/data/stories -d bot/domain.yml -o bot/models/di
 ### custom actions:
 
 ```
-
-
-run sepratly
+Run sepratly
 
 python3.5 -m rasa_core_sdk.endpoint --actions actions
 
