@@ -1,7 +1,7 @@
 
 ### All these files are ready for you to use, all you have to do is provide your Google Places API key to credentials.yml file and train the models. Train the NLU model using the command below which will call Rasa NLU train function, pass training data and processing pipeline configuration files, and save the model inside the models/current/nlu_model directory:https://rasa.com/docs/core/0.9.8/tutorial_supervised/
 
-
+![alt text](rasa_flow.png)
 
 Terminal bot:
 
